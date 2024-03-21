@@ -6,18 +6,9 @@ class Paciente {
   #dataNascimento;
 
   constructor(cpf, nome, dataNascimento) {
-    var valido = false;
-    
-    valido = Validador.verificarNome(nome);
-    if(valido) this.#nome = nome;
-    
-    valido = Validador.verificarCPF(cpf);
-    if(valido) this.#cpf = cpf;
-    
-    valido = Validador.verificarFormatoData(dataNascimento);
-    const data = Validador.converterParaData(dataNascimento);
-    valido = valido && (Validador.calcularIdade(data) >= 13)
-    if(valido) this.#dataNascimento = dataNascimento;
+    this.#nome = nome;
+    this.#cpf = cpf;
+    this.#dataNascimento = dataNascimento;
   }
 
   get nome () {
