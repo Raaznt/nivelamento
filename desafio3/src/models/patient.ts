@@ -1,8 +1,5 @@
-import { Model, Sequelize } from "sequelize";
 import { IValidator } from "./validation/IValidator";
 import { ValidationResult } from "./validation/ValidationResult";
-import { sequelize } from "../config/db";
-import { DataTypes } from "sequelize";
 
 class Patient {
   private _name: string;
